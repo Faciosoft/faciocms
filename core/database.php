@@ -33,7 +33,7 @@
 
         public function CreateDefault(): bool {
             $createTableQuery = "CREATE TABLE `fcms_coreconfig` ( `id` INT NOT NULL AUTO_INCREMENT , `version` TEXT NOT NULL , PRIMARY KEY (`id`))";
-            $initConfigQuery = "INSERT INTO `fcms_coreconfig` VALUES ('', '3.0.0')";
+            $initConfigQuery = "INSERT INTO `fcms_coreconfig` VALUES (NULL, '3.0.0')";
 
             if($this->connection->query($createTableQuery)) {
                 // Core Config Table Created

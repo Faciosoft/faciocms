@@ -32,7 +32,7 @@
     // Resource Path
     $full_path = str_replace("_", ".", $_SERVER["PHP_SELF"]);
     $short_path = str_replace("/static/index.php", "", $full_path);
-    $path = __DIR__ . "\\..\\..\\versions\\$version$short_path";
+    $path = __DIR__ . "/../../versions/$version$short_path";
     
     // Resource Extension
     $extension = strtolower(pathinfo($full_path, PATHINFO_EXTENSION));

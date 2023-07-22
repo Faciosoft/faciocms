@@ -1,6 +1,6 @@
 <?php   
     // Constants
-    require_once(realpath(dirname(__FILE__)) . '\\..\\lang\\en.php');
+    require_once(realpath(dirname(__FILE__)) . '/../lang/en.php');
 
     // Libs protos
     require_once('Page/Meta.php');
@@ -31,13 +31,13 @@
     require_once('client/Session.php');
 
     // API
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Auth.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Settings.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Page.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\PageMeta.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\User.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Layout.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Utils.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\PageGallery.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\Router.php');
-    require_once(realpath(dirname(__FILE__)) . '\\..\\api\\API.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Auth.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Settings.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Page.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/PageMeta.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/User.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Layout.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Utils.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/PageGallery.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/Router.php');
+    require_once(realpath(dirname(__FILE__)) . '/../api/API.php');

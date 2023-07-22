@@ -6,7 +6,7 @@
 
     <span class="thin-line darken"></span>
 
-    <?php if($cms->user["permissions_level"] > 0): ?>
+    <?php if($cms->user && $cms->user["permissions_level"] > 0): ?>
         <div class="logged-content">
             <a class="cms-btn" role="button" href="/admin/pages">Admin panel</a>
             <a class="cms-btn" role="button" href="/admin/logout"><em class="fas fa-sign-out-alt"></em> Sign out</a>

@@ -11,7 +11,7 @@
             $value  = $database->Escape($value);
             
             // Query
-            $query = "INSERT INTO `fcms_pagemeta` VALUES ('', '$owner', '$key', '$value')";
+            $query = "INSERT INTO `fcms_pagemeta` VALUES (NULL, '$owner', '$key', '$value')";
 
             return !!$database->Raw($query);
         } 

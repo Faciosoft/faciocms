@@ -16,9 +16,12 @@
             }
 
             // Including view
-            if(@include($path)) { /* Success */}
-            else {
-                echo 'Error while including view: ' . $path;
+            try {
+                include($path);
+            } 
+            catch(Exception $e) {
+                echo 'Error whilst including view: ' . $path;
+                echo $e;
             }
         }
         
@@ -27,7 +30,7 @@
             global $app;
             
             // if($this->isInAdminPanel()) {
-                $this->IncludeView(realpath(dirname(__FILE__)) . '\\..\\views\\' . $viewName . '.php', $data);
+                $this->IncludeView(realpath(dirname(__FILE__)) . '/../views/' . $viewName . '.php', $data);
             // }
 
         }

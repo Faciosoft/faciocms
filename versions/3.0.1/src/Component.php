@@ -15,7 +15,7 @@
             }
 
             // Getting path
-            $path = __DIR__ . "\\..\\components\\$componentName.php";
+            $path = __DIR__ . "/../components/$componentName.php";
             
             if(!file_exists($path)) {
                 $this->QuitWithError("Component including error", "Component with name \"$componentName\" don't exists in currently installed FacioCMS Version. See documentation or check if FacioCMS is installed properly!");

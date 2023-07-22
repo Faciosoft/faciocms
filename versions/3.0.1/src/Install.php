@@ -48,7 +48,7 @@
             $date = date("Y-m-d H:i:s");
 
             // 4 is Super Admin Permission Level
-            $query = "INSERT INTO `fcms_users` VALUES ('', '$username', '', '$hashed_password', 4, '$date', '$date', '')";
+            $query = "INSERT INTO `fcms_users` VALUES (NULL, '$username', '', '$hashed_password', 4, '$date', '$date', '')";
             $error = !$database->Raw($query);
 
             // If error
@@ -79,7 +79,7 @@
             $query = "SELECT * FROM `fcms_settings`";
             if(count($database->Select($query)) > 0) return; // Config exists
 
-            $query = "INSERT INTO `fcms_settings` (`id`, `prod`, `website_name`, `website_url`, `theme_color`, `secondary_color`, `autoupdate`) VALUES (NULL, '0', 'FacioCMS website', 'https://faciocms.com', '#242b38', '#fc3333', '0');";
+            $query = "INSERT INTO `fcms_settings` (`id`, `prod`, `website_name`, `website_url`, `theme_color`, `secondary_color`, `autoupdate`, `supercaching`) VALUES (NULL, '0', 'FacioCMS website', 'https://faciocms.com', '#242b38', '#fc3333', '0', '0');";
             $database->Raw($query);
         }
     }

@@ -35,7 +35,7 @@ export default {
             started: false,
             started_at: 0,
             ready: 0,
-            url: window.location.origin + '?count-views=false',
+            url: window.location.origin + '', // ?count-views=false
             estimated_time_left: 0,
             time_from_start: 0
         }

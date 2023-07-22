@@ -58,7 +58,7 @@
             $user_id = $_SESSION["USER_ID"];
 
             // Query
-            $query = "INSERT INTO `fcms_pages` VALUES ('', '$parent_id', '$title', 'New page!', 'Lorem ipsum dolor sit amet...', '$current_date', '$current_date', '$user_id', '', '$uuid')";
+            $query = "INSERT INTO `fcms_pages` VALUES (NULL, '$parent_id', '$title', 'New page!', 'Lorem ipsum dolor sit amet...', '$current_date', '$current_date', '$user_id', '', '$uuid')";
 
             if($database->Raw($query)) {
                 $new_page_id = $database->Select("SELECT `id` FROM `fcms_pages` ORDER BY `id` DESC LIMIT 1")[0]["id"];

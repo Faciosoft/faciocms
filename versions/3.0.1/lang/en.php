@@ -76,6 +76,7 @@
     define("EN_SIZE_OF_CACHE", 'Size of cache');
     define("EN_MIGRATEFROMCLOUD", 'Migrate from cloud');
     define("EN_VERSIONS", 'Versions');
+    define("EN_PERFORMANCE_WITH_SUPERCACHING", 'Unfortunetly, performance tests cannot be run while using Super Caching and Production mode');
 
     // Long
     define('EN_TXT_1', 'Average FacioCMS request process time on your website');
