@@ -16,7 +16,7 @@
             $this->link = $this->cms->GetFullUrl($this->page);
         }
 
-        public function GetPage(): Page {
+        public function GetPage(): array|Page {
             return $this->page;
         }
 
