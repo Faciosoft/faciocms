@@ -5,5 +5,5 @@
         "hostname": "localhost",
         "database": "cms"
     },
-    "defaultInstalation": "versions/3.0.1/version.json"
+    "defaultInstalation": "versions/3.0.2/version.json"
 }
