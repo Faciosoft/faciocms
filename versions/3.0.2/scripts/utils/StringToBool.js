@@ -1,0 +1,1 @@
+export const stringToBool = (string) => string === 'true' ? true : false;

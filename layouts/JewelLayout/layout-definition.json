@@ -1,0 +1,14 @@
+{
+    "name": "JewelLayout",
+    "version": "0.1.0",
+    "requirements": {
+        "faciocms": {
+            "version": {
+                "min": "3.0.0",
+                "max": "unset"
+            }
+        }
+    },
+    "body": "body.jewel",
+    "head": "head.jewel"
+}

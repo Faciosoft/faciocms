@@ -1,0 +1,224 @@
+@mixin Button($theme, $bg, $font) {
+    display: inline-block;
+
+    color: $font;
+    background: $bg;
+    box-shadow: 0 4px 8px #0004;
+
+    padding: 10px 15px;
+    margin: 0 4px;
+    // margin-top: 32px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    border: 2px solid #fff2;
+    transition: .225s;
+
+    @if true {
+        &:hover, &.active {
+            border-color: $theme;
+            background: $theme;
+            box-shadow: 0 0 16px $theme;
+        }
+    } @else {
+        &:hover, &.active {
+            border-color: $theme;
+            color: $theme;
+            box-shadow: 0 0 16px $theme;
+        }
+    }
+
+    &:not(.icon) em {
+        margin-left: 6px;
+    }
+
+    em.icon {
+        margin-left: 12px;
+    }
+
+    em.no {
+        margin-left: 0px;
+    }
+
+    &.cms-btn-wh-equal {
+        padding: 8px;
+        width: 43px;
+    }
+
+    @at-root a {
+        text-decoration: none;
+    }
+}
+
+@mixin ToolButton($theme, $bg, $font) {
+    border: 0;
+    outline: 0;
+    background: $theme;
+    color: $font;
+    text-shadow: 1px 1px $bg, -1px -1px $bg, -1px 1px $bg, 1px -1px $bg;
+    box-shadow: 4px 4px 8px 1px $bg;
+
+    @at-root a[role="button"] {
+        padding: 3.5px 6px;
+    }
+}
+
+@mixin Blazing() {
+    color: transparent;
+    background: linear-gradient(to right, rgb(252, 51, 51), rgb(255, 135, 37));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@mixin Checkbox($resize: 6px) {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        display: block;
+        background: $bg2;
+        width: 60px;
+        height: 32px;
+        border-radius: 50px;
+        box-shadow: 0 0 8px 4px #0002;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        color: #fff;
+        background: $logo;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border-radius: 50px;
+        transition: .225s;
+    }
+
+    &:hover::after {
+        width: 20px + $resize;
+    }
+
+    &:checked:hover::after {
+        left: 35px - $resize;
+    }
+
+    &:checked::after {
+        background: $success;
+        left: 35px;
+    }
+}
+
+@mixin Input() {
+    color: $font;
+    background: $bg1;
+    box-shadow: 0 4px 8px #0004;
+
+    padding: 10px 10px;
+    margin: 0 4px;
+    // margin-top: 32px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    outline: 0;
+    
+    width: 100%;
+
+    border: 2px solid #fff2;
+    transition: .225s;
+
+    &:hover {
+        color: darken($font, 20%);
+    }
+
+    &:active, &:focus {
+        color: darken($logo, 10%);
+    }
+
+    // background: #fff2;
+    // 
+    // color: #fff;
+}
+
+@mixin ColorInput() {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: $font;
+    border-bottom: 3px solid $logo;
+    box-shadow: 0 4px 8px 4px #0004;
+    padding: 8px;
+    cursor: pointer;
+}
+
+@mixin Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $bg2;
+    width: 550px;
+    padding: 16px;
+    box-shadow: 0 0 8px 4px #0004;
+
+    &::before {
+        content: "";
+        display: block;
+
+        position: absolute;
+        top: -100vh;
+        left: -100vw;
+        height: 200vh;
+        width: 200vw;
+        background: #0004;
+
+        z-index: -1;
+    }
+
+    .cms-modal-title {
+        color: $font;
+        text-align: center;
+    }
+
+    .cms-modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 24px;
+
+        button {
+            margin: 0 16px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin FullButton {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    background: #fff2;
+    box-shadow: 2px 2px 4px #0004;
+    margin-top: 8px;
+    border: 0;
+    border-bottom: 3px solid $logo;
+    color: #fff;
+    transition: .225s;
+
+    em {
+        margin-left: 8px;
+    }
+
+    &:hover {
+        transform: scale(.99)
+    }
+}

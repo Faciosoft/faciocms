@@ -1,0 +1,23 @@
+@keyframes Glitchy {
+    $size: 3px;
+    $msize: -3px;
+
+    0% {
+        text-shadow: $msize $msize green;
+    }
+    20% {
+        text-shadow: $msize $size blue;
+    }
+    40% {
+        text-shadow: $size $msize red;
+    }
+    60% {
+        text-shadow: $size $size green;
+    }
+    80% {
+        text-shadow: $size $msize blue;
+    }
+    100% {
+        text-shadow: $msize $msize purple;
+    }
+}

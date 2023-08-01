@@ -6,5 +6,9 @@
     {
         "version": "3.0.1",
         "path": "versions/3.0.1/version.json"
+    },
+    {
+        "version": "3.0.2",
+        "path": "versions/3.0.2/version.json"
     }
 ]

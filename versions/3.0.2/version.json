@@ -1,0 +1,8 @@
+{
+    "version": "3.0.2",
+    "name": "Coconut",
+    "head": "head.php",
+    "body": "body.php",
+    "logic": "app.php",
+    "source_libs": "src/require.php"
+}
