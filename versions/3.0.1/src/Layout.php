@@ -51,7 +51,7 @@
             
             // Including layout .php file
             $body_path = "../layouts/$layout_name/$config->body";
-            require_once($body_path);
+            require($body_path);
         }
 
         public function IncludeLayoutHead(string $layout_name, array $data) {
@@ -67,7 +67,7 @@
             
             // Including layout .php file
             $body_path = "../layouts/$layout_name/$config->head";
-            require_once($body_path);
+            require($body_path);
         }
 
         public function GetAllLayouts(): array {
